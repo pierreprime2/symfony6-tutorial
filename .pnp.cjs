@@ -33,8 +33,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@fontsource/roboto-condensed", "npm:5.0.14"],\
             ["@fortawesome/fontawesome-free", "npm:6.5.1"],\
             ["@hotwired/stimulus", "npm:3.2.2"],\
+            ["@hotwired/turbo", "npm:7.3.0"],\
             ["@popperjs/core", "npm:2.11.8"],\
             ["@symfony/stimulus-bridge", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:3.2.2"],\
+            ["@symfony/ux-turbo", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#file:vendor/symfony/ux-turbo/assets#vendor/symfony/ux-turbo/assets::hash=b232c6&locator=root-workspace-0b6124%40workspace%3A."],\
             ["@symfony/webpack-encore", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:4.6.1"],\
             ["axios", "npm:1.6.7"],\
             ["bootstrap", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:5.3.2"],\
@@ -2393,6 +2395,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@hotwired/turbo", [\
+        ["npm:7.3.0", {\
+          "packageLocation": "./.yarn/cache/@hotwired-turbo-npm-7.3.0-579167aa60-ccc03c980e.zip/node_modules/@hotwired/turbo/",\
+          "packageDependencies": [\
+            ["@hotwired/turbo", "npm:7.3.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@isaacs/cliui", [\
         ["npm:8.0.2", {\
           "packageLocation": "./.yarn/cache/@isaacs-cliui-npm-8.0.2-f4364666d5-4a473b9b32.zip/node_modules/@isaacs/cliui/",\
@@ -2612,6 +2623,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packagePeers": [\
             "@hotwired/stimulus",\
             "@types/hotwired__stimulus"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@symfony/ux-turbo", [\
+        ["file:vendor/symfony/ux-turbo/assets#vendor/symfony/ux-turbo/assets::hash=b232c6&locator=root-workspace-0b6124%40workspace%3A.", {\
+          "packageLocation": "./.yarn/cache/@symfony-ux-turbo-file-853888ba47-58cc5a1df4.zip/node_modules/@symfony/ux-turbo/",\
+          "packageDependencies": [\
+            ["@symfony/ux-turbo", "file:vendor/symfony/ux-turbo/assets#vendor/symfony/ux-turbo/assets::hash=b232c6&locator=root-workspace-0b6124%40workspace%3A."]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#file:vendor/symfony/ux-turbo/assets#vendor/symfony/ux-turbo/assets::hash=b232c6&locator=root-workspace-0b6124%40workspace%3A.", {\
+          "packageLocation": "./.yarn/__virtual__/@symfony-ux-turbo-virtual-571c24382b/0/cache/@symfony-ux-turbo-file-853888ba47-58cc5a1df4.zip/node_modules/@symfony/ux-turbo/",\
+          "packageDependencies": [\
+            ["@symfony/ux-turbo", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#file:vendor/symfony/ux-turbo/assets#vendor/symfony/ux-turbo/assets::hash=b232c6&locator=root-workspace-0b6124%40workspace%3A."],\
+            ["@hotwired/stimulus", "npm:3.2.2"],\
+            ["@hotwired/turbo", "npm:7.3.0"],\
+            ["@types/hotwired__stimulus", null],\
+            ["@types/hotwired__turbo", null]\
+          ],\
+          "packagePeers": [\
+            "@hotwired/stimulus",\
+            "@hotwired/turbo",\
+            "@types/hotwired__stimulus",\
+            "@types/hotwired__turbo"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -8196,8 +8233,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@fontsource/roboto-condensed", "npm:5.0.14"],\
             ["@fortawesome/fontawesome-free", "npm:6.5.1"],\
             ["@hotwired/stimulus", "npm:3.2.2"],\
+            ["@hotwired/turbo", "npm:7.3.0"],\
             ["@popperjs/core", "npm:2.11.8"],\
             ["@symfony/stimulus-bridge", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:3.2.2"],\
+            ["@symfony/ux-turbo", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#file:vendor/symfony/ux-turbo/assets#vendor/symfony/ux-turbo/assets::hash=b232c6&locator=root-workspace-0b6124%40workspace%3A."],\
             ["@symfony/webpack-encore", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:4.6.1"],\
             ["axios", "npm:1.6.7"],\
             ["bootstrap", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:5.3.2"],\
