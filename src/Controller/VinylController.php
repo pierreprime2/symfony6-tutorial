@@ -2,15 +2,14 @@
 
 namespace App\Controller;
 
-use App\Service\MixRepository;
-use Psr\Cache\CacheItemInterface;
+use App\Repository\VinylMixRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
-use Symfony\Contracts\Cache\CacheInterface;
-use Symfony\Contracts\HttpClient\HttpClientInterface;
 use Twig\Environment;
 use function Symfony\Component\String\u;
+
+//use App\Service\MixRepository;
 
 class VinylController extends AbstractController
 {
@@ -40,7 +39,7 @@ class VinylController extends AbstractController
     }
 
     #[Route('/browse/{slug}', name: 'app_browse')]
-    public function browse(HttpClientInterface $httpClient, CacheInterface $cache, MixRepository $mixRepository, string $slug = null): Response
+    public function browse(VinylMixRepository $mixRepository, string $slug = null): Response
     {
         $genre = $slug ? u(str_replace('-', '', $slug))->title(true) : null;
 
@@ -52,7 +51,8 @@ class VinylController extends AbstractController
 //            return $response->toArray();
 //        });
 
-        $mixes = $mixRepository->findAll();
+        $mixes = $mixRepository->findAllOrderByVotes($slug);
+//        dd($mixes);
 
         return $this->render('vinyl/browse.html.twig', [
             'genre' => $genre,
