@@ -9,11 +9,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\String\Slugger\AsciiSlugger;
+use Symfony\Component\String\Slugger\SluggerInterface;
 
 class MixController extends AbstractController
 {
     #[Route('/mix/new')]
-    public function new(EntityManagerInterface $entityManager): Response
+    public function new(EntityManagerInterface $entityManager, SluggerInterface $slugger): Response
     {
         $mix = new VinylMix();
         $mix->setTitle('Do you Remember... Phil Collins?!');
@@ -22,6 +24,7 @@ class MixController extends AbstractController
         $mix->setGenre($genres[array_rand($genres)]);
         $mix->setTrackCount(rand(5, 20));
         $mix->setVotes(rand(-50, 50));
+        $mix->setSlug(strtolower($slugger->slug($mix->getTitle())));
 
         $entityManager->persist($mix);
         $entityManager->flush();
@@ -34,7 +37,7 @@ class MixController extends AbstractController
         ));
     }
 
-    #[Route('/mix/{id}', name: 'app_mix_show')]
+    #[Route('/mix/{slug}', name: 'app_mix_show')]
     public function show(VinylMix $mix): Response
     {
         return $this->render('mix/show.html.twig', [
